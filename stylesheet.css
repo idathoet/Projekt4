@@ -1,3 +1,20 @@
 body {
-    background-color: pink;
+    background-color: lightblue;
+}
+
+header {
+  border-style: dashed;
+  border-width: 5px;
+  width: 50%;
+}
+
+h1 {
+  color: white;
+  font-family: arial;
+  font-size: 80px;
+}
+
+p {
+  font-family: arial;
+  font-size: 40px;
 }

@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: Biryani, sans-serif;
+  line-height: 1;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%; /* skriftstørrelse 10px */
+  height: 100vh;
+}

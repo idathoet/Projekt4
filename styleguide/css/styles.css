@@ -13,6 +13,13 @@ a {
 }
 
 html {
-  font-size: 62.5%; /* skriftstørrelse 10px */
+  font-size: 100%; /* skriftstørrelse 10px */
   height: 100vh;
+}
+
+li {
+  padding: 10px 10px;
+  width: 100px;
+  height: auto;
+  background-color: antiquewhite;
 }

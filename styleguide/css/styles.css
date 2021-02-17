@@ -13,13 +13,40 @@ a {
 }
 
 html {
-  font-size: 100%; /* skriftstørrelse 10px */
+  font-size: 62.5%; /* skriftstørrelse 10px */
   height: 100vh;
 }
 
-li {
-  padding: 10px 10px;
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+}
+.button1 {
+  background-color: #56A0D3;
+  font-size: 30px;
+  height: 35px;
   width: 100px;
-  height: auto;
-  background-color: antiquewhite;
+  margin: 30px;
+  text-align: center;
+}
+
+.button2 {
+  background-color: #D38256;
+  font-size: 20px;
+  height: 25px;
+  width: 80px;
+  margin: 30px;
+  text-align: center;
+}
+
+.button3 {
+  background-color: #2D2D2D;
+  font-size: 15px;
+  color: #F2F0ED;
+  height: 20px;
+  width: 60px;
+  margin: 30px;
+  text-align: center;
 }

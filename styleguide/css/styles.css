@@ -8,11 +8,22 @@
 nav{
   font-size: 25px;
   background-color: #56A0D3;
-  height: 2em;
+  color: white;
+  height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+h1{
+  text-align: center;
+  font-size: 47px;
+  margin: 10px;
+}
+h2{
+  text-align: center;
+  font-size: 35px;
 }
 a {
   text-decoration: none;

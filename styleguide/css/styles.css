@@ -59,7 +59,7 @@ html {
 }
 
 .box{
-  font-size: 100%;
+  font-size: 25px;
   text-align: center;
   width: 250px;
   border-radius: 10px;
@@ -68,15 +68,19 @@ html {
   padding: 25px 0;
 }
 
+.text-box{
+  color: #303031;
+  border-style: solid;
+  margin-left: 15%;
+}
+
 .white {
   color: #303031;
   background-color: #FFFFFF;
 }
 
 .white-text{
-  color: #303031;
   grid-area: whitetext;
-  border-style: solid;
 }
 
 .blue {

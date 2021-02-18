@@ -24,6 +24,38 @@ html {
   height: 100vh;
 }
 
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr ;
+  }
+
+.wrapper-farver {
+  grid-template-areas:
+  "white ."
+  "blue ."
+}
+
+.white {
+  grid-area: white;
+  font-size: 100%;
+  text-align: center;
+  width: 150px;
+  background-color: #FFFFFF;
+  margin-left: 15%;
+  padding: 25px 0;
+}
+
+.blue {
+  grid-area: blue;
+  font-size: 100%;
+  text-align: center;
+  width: 150px;
+  background-color: #57a0d4;
+  margin-left: 15%;
+  padding: 25px 0;
+}
+
 .button-wrapper{
   display: flex;
   flex-direction: row;

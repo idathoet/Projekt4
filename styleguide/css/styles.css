@@ -31,12 +31,17 @@ html {
   }
 
 .wrapper-farver {
+  color: white;
   grid-template-areas:
   "white ."
   "blue ."
+  "grey ."
+  "red ."
+  "green ."
 }
 
 .white {
+  color: #303031; 
   grid-area: white;
   font-size: 100%;
   text-align: center;
@@ -55,6 +60,37 @@ html {
   margin-left: 15%;
   padding: 25px 0;
 }
+
+.grey {
+  grid-area: grey;
+  font-size: 100%;
+  text-align: center;
+  width: 150px;
+  background-color: #303031;
+  margin-left: 15%;
+  padding: 25px 0;
+}
+
+.red {
+  grid-area: red;
+  font-size: 100%;
+  text-align: center;
+  width: 150px;
+  background-color: #cc1336;
+  margin-left: 15%;
+  padding: 25px 0;
+}
+
+.green {
+  grid-area: green;
+  font-size: 100%;
+  text-align: center;
+  width: 150px;
+  background-color: #68bd96;
+  margin-left: 15%;
+  padding: 25px 0;
+}
+
 
 .button-wrapper{
   display: flex;

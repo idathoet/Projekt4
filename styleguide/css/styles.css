@@ -47,6 +47,7 @@ html {
 
 .subcon {
   display: grid;
+  grid-gap: 30px;
   grid-template-areas: 
   "element snippet"
   "beskrivelse .";
@@ -62,6 +63,11 @@ html {
 
 .snippet {
   grid-area: snippet;
+  background-color: grey;
+  color: #F2F0ED;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .box{

@@ -74,6 +74,7 @@ html {
   grid-area: snippet;
   background-color: grey;
   color: #F2F0ED;
+  width: 400px;
   font-size: 15px;
   text-align: center;
   padding-top: 10px;
@@ -127,8 +128,8 @@ html {
 .button1 {
   background-color: #56A0D3;
   font-size: 30px;
-  height: 35px;
-  width: 100px;
+  height: auto;
+  max-width: 100px;
   margin: 30px;
   text-align: center;
 }

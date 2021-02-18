@@ -5,7 +5,15 @@
   font-family: Biryani, sans-serif;
   line-height: 1;
 }
-
+nav{
+  font-size: 25px;
+  background-color: #56A0D3;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 a {
   text-decoration: none;
   color: inherit;

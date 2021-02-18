@@ -50,6 +50,7 @@ html {
   color: white;
   grid-template-areas:
   "white ."
+  "whitetext"
   "blue ."
   "grey ."
   "red ."
@@ -57,77 +58,50 @@ html {
   "orange ."
 }
 
-.white {
-  color: #303031;
-  grid-area: white;
+.box{
   font-size: 100%;
   text-align: center;
   width: 250px;
   border-radius: 10px;
-  background-color: #FFFFFF;
   margin-left: 15%;
   margin-top: 2%;
   padding: 25px 0;
+}
+
+.white {
+  color: #303031;
+  background-color: #FFFFFF;
+}
+
+.white-text{
+  color: #303031;
+  grid-area: whitetext;
+  border-style: solid;
 }
 
 .blue {
   grid-area: blue;
-  font-size: 100%;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
   background-color: #57a0d4;
-  margin-left: 15%;
-  margin-top: 2%;
-  padding: 25px 0;
 }
 
 .grey {
   grid-area: grey;
-  font-size: 100%;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
   background-color: #303031;
-  margin-left: 15%;
-  margin-top: 2%;
-  padding: 25px 0;
 }
 
 .red {
   grid-area: red;
-  font-size: 100%;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
   background-color: #cc1336;
-  margin-left: 15%;
-  margin-top: 2%;
-  padding: 25px 0;
 }
 
 .green {
   grid-area: green;
-  font-size: 100%;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
   background-color: #68bd96;
-  margin-left: 15%;
-  margin-top: 2%;
-  padding: 25px 0;
 }
 
 .orange {
   grid-area: orange;
-  font-size: 100%;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
   background-color: #D38256;
-  margin-left: 15%;
-  margin-top: 2%;
-  padding: 25px 0;
 }
 
 

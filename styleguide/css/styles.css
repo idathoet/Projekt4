@@ -49,16 +49,19 @@ html {
   "grey ."
   "red ."
   "green ."
+  "orange ."
 }
 
 .white {
-  color: #303031; 
+  color: #303031;
   grid-area: white;
   font-size: 100%;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  border-radius: 10px;
   background-color: #FFFFFF;
   margin-left: 15%;
+  margin-top: 2%;
   padding: 25px 0;
 }
 
@@ -66,9 +69,11 @@ html {
   grid-area: blue;
   font-size: 100%;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  border-radius: 10px;
   background-color: #57a0d4;
   margin-left: 15%;
+  margin-top: 2%;
   padding: 25px 0;
 }
 
@@ -76,9 +81,11 @@ html {
   grid-area: grey;
   font-size: 100%;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  border-radius: 10px;
   background-color: #303031;
   margin-left: 15%;
+  margin-top: 2%;
   padding: 25px 0;
 }
 
@@ -86,9 +93,11 @@ html {
   grid-area: red;
   font-size: 100%;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  border-radius: 10px;
   background-color: #cc1336;
   margin-left: 15%;
+  margin-top: 2%;
   padding: 25px 0;
 }
 
@@ -96,9 +105,23 @@ html {
   grid-area: green;
   font-size: 100%;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  border-radius: 10px;
   background-color: #68bd96;
   margin-left: 15%;
+  margin-top: 2%;
+  padding: 25px 0;
+}
+
+.orange {
+  grid-area: orange;
+  font-size: 100%;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+  background-color: #D38256;
+  margin-left: 15%;
+  margin-top: 2%;
   padding: 25px 0;
 }
 

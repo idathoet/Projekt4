@@ -40,6 +40,30 @@ html {
   height: 100vh;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subcon {
+  display: grid;
+  grid-template-areas: 
+  "element snippet"
+  "beskrivelse .";
+}
+
+.element {
+  grid-area: element;
+}
+
+.beskrivelse {
+  grid-area: beskrivelse;
+}
+
+.snippet {
+  grid-area: snippet;
+}
+
 .wrapper {
   display: grid;
   grid-gap: 20px;

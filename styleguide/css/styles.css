@@ -48,7 +48,7 @@ html {
 .subcon {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 
+  grid-template-areas:
   "element snippet"
   "beskrivelse .";
 }

@@ -1,13 +1,42 @@
 console.log("JS is running...")
 
 //Skaber array til at gemme på innerHTML
-let lastVisit = [document.getElementById("knapper").innerHTML];
+let lastVisit = [];
+
+function start() {
+    let popup = document.createElement("DIV");
+    popup.setAttribute("id", "pop-up");
+    // popup.innerHTML = "hej";
+    document.body.appendChild(popup);
+
+    let knapper = document.createElement("DIV");
+    knapper.setAttribute("id", "knapper");
+    document.getElementById("pop-up").appendChild(knapper);
+
+    for (i = 0; i < 2; i++) {
+        let page = document.createElement("DIV");
+        page.setAttribute("id", "knap" + (i + 1));
+        page.setAttribute("class", "knap");
+        page.setAttribute("onclick", "knap(" + (i + 1) + ")");
+        document.getElementById("knapper").appendChild(page);
+    }
+
+    lastVisit.push(document.getElementById("knapper").innerHTML)
+}
 
 //Initierer en array, som holder på info om antal besøgte sider (pushes i knap() og poppes i tilbage())
 let history = [];
 
 function knap(x) {
     if (x == 1) {
+        if (!document.getElementById("tilbage")) {
+            let tilbage = document.createElement("DIV");
+            tilbage.setAttribute("id", "tilbage");
+            tilbage.setAttribute("onclick", "tilbage()");
+            tilbage.innerHTML = "Tilbage";
+            document.getElementById("pop-up").appendChild(tilbage);
+        }
+
         //Giver hver knap et unikt ID
         let y = 3;
 
@@ -28,65 +57,10 @@ function knap(x) {
         history.push(1);
 
     } else if (x == 2) {
-        let y = 8;
-        //Resetter
-        document.getElementById("knapper").innerHTML = "";
-
-        //Resetter
-        document.getElementById("knapper").innerHTML = "";
-
-        //Creator
-        for (i = 0; i < 4; i++) {
-            let page = document.createElement("DIV");
-            page.setAttribute("id", "knap" + (i + y));
-            page.setAttribute("class", "knap");
-            page.setAttribute("onclick", "knap(" + (i + y) + ")");
-            document.getElementById("knapper").appendChild(page);
-        }
-
-        //Gemmer historik
-        lastVisit.push(document.getElementById("knapper").innerHTML);
-        history.push(1);
 
     } else if (x == 3) {
-        //Giver hver knap en unik værdi
-        let y = 12;
-
-        //Resetter
-        document.getElementById("knapper").innerHTML = "";
-
-        //Creator
-        for (i = 0; i < 2; i++) {
-            let page = document.createElement("DIV");
-            page.setAttribute("id", "knap" + (i + y));
-            page.setAttribute("class", "knap");
-            page.setAttribute("onclick", "knap(" + (i + y) + ")");
-            document.getElementById("knapper").appendChild(page);
-        }
-
-        //Gemmer historik
-        lastVisit.push(document.getElementById("knapper").innerHTML);
-        history.push(1);
 
     } else if (x == 8) {
-        //Giver hver knap en unik værdi
-        let y = 12;
-
-        //Resetter
-        document.getElementById("knapper").innerHTML = "";
-
-        //Creator
-        for (i = 0; i < 3; i++) {
-            let page = document.createElement("DIV");
-            page.setAttribute("id", "knap" + (i + y));
-            page.setAttribute("class", "knap");
-            page.setAttribute("onclick", "knap(" + (i + y) + ")");
-            document.getElementById("knapper").appendChild(page);
-        }
-
-        //Gemmer historik
-        lastVisit.push(document.getElementById("knapper").innerHTML);
-        history.push(1);
 
     }
 }

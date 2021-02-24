@@ -1,0 +1,36 @@
+.knap {
+    width: 200px;
+    background-color: aqua;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#tilbage {
+    width: 100px;
+    background-color: crimson;
+    margin: 5px;
+    text-align: center;
+}
+
+#pop-up {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#knapper {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: crimson;
+}

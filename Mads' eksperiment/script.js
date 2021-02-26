@@ -3,45 +3,53 @@ console.log("JS is running...")
 //Skaber array til at gemme på innerHTML
 let lastVisit = [];
 
+//Initierer en array, som holder på info om antal besøgte sider (pushes i knap() og poppes i backBtn())
+let history = [];
+
 function start() {
-    let popup = document.createElement("DIV");
-    popup.setAttribute("id", "pop-up");
-    // popup.innerHTML = "hej";
-    document.body.appendChild(popup);
+    //Resetter
+    document.getElementById("backBox").innerHTML = "";
+    document.getElementById("closeBox").innerHTML = "";
+    document.getElementById("lowerSection").innerHTML = "";
 
-    let knapper = document.createElement("DIV");
-    knapper.setAttribute("id", "knapper");
-    document.getElementById("pop-up").appendChild(knapper);
+    //Viser pop-up
+    document.getElementById("wrapper").style.display = "block";
 
+    //Skaber trin 1-knapper
     for (i = 0; i < 2; i++) {
         let page = document.createElement("DIV");
         page.setAttribute("id", "knap" + (i + 1));
         page.setAttribute("class", "knap");
         page.setAttribute("onclick", "knap(" + (i + 1) + ")");
-        document.getElementById("knapper").appendChild(page);
+        document.getElementById("lowerSection").appendChild(page);
     }
 
-    lastVisit.push(document.getElementById("knapper").innerHTML)
+    //Skaber luk-knap
+    let luk = document.createElement("DIV");
+    luk.setAttribute("id", "closeBtn");
+    luk.innerHTML = "<p>X</p>";
+    console.log(luk);
+    document.getElementById("closeBox").appendChild(luk);
+
+    lastVisit.push(document.getElementById("lowerSection").innerHTML)
 }
 
-//Initierer en array, som holder på info om antal besøgte sider (pushes i knap() og poppes i tilbage())
-let history = [];
-
 function knap(x) {
-    if (x == 1) {
-        if (!document.getElementById("tilbage")) {
-            let tilbage = document.createElement("DIV");
-            tilbage.setAttribute("id", "tilbage");
-            tilbage.setAttribute("onclick", "tilbage()");
-            tilbage.innerHTML = "Tilbage";
-            document.getElementById("pop-up").appendChild(tilbage);
-        }
+    //Tjekker om der er en backBtn-knap - hvis ikke skaber den en
+    if (!document.getElementById("backBtn")) {
+        let backBtn = document.createElement("DIV");
+        backBtn.setAttribute("id", "backBtn");
+        backBtn.setAttribute("onclick", "backBtn()");
+        backBtn.innerHTML = "Tilbage";
+        document.getElementById("backBox").appendChild(backBtn);
+    }
 
+    if (x == 1) {
         //Giver hver knap et unikt ID
         let y = 3;
 
         //Resetter
-        document.getElementById("knapper").innerHTML = "";
+        document.getElementById("lowerSection").innerHTML = "";
 
         //Creator
         for (i = 0; i < 5; i++) {
@@ -49,18 +57,20 @@ function knap(x) {
             page.setAttribute("id", "knap" + (i + y));
             page.setAttribute("class", "knap");
             page.setAttribute("onclick", "knap(" + (i + y) + ")");
-            document.getElementById("knapper").appendChild(page);
+            document.getElementById("lowerSection").appendChild(page);
         }
 
         //Gemmer historik
-        lastVisit.push(document.getElementById("knapper").innerHTML);
+        lastVisit.push(document.getElementById("lowerSection").innerHTML);
         history.push(1);
-
     } else if (x == 2) {
+//Anton
 
     } else if (x == 3) {
+//Ida
 
     } else if (x == 8) {
+//
 
     }
 }
@@ -110,16 +120,23 @@ function nameBtn() {
     }
 }
 
-function tilbage() {
+function backBtn() {
     //Resetter indhold
-    document.getElementById("knapper").innerHTML = "";
+    document.getElementById("lowerSection").innerHTML = "";
 
     //Fjerner sidste item i history-array
     history.pop();
 
     //Skaber ny række af knapper, baseret på lastVisit og history
-    document.getElementById("knapper").innerHTML = lastVisit[history.length];
+    document.getElementById("lowerSection").innerHTML = lastVisit[history.length];
+}
+
+function delBackBtn () {
+    if (document.getElementById("knap1")) {
+        document.getElementById("backBox").innerHTML = "";
+    }
 }
 
 //Ved hvert klik (uanset placering) kører funktionen nameBtn() (PÅ INGEN MÅDE OPTIMALT)
 document.body.addEventListener("click", nameBtn);
+document.body.addEventListener("click", delBackBtn);

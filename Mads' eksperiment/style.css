@@ -6,11 +6,34 @@
     text-align: center;
 }
 
-#tilbage {
+#backBtn {
     width: 100px;
     background-color: crimson;
     margin: 5px;
     text-align: center;
+}
+
+#backBox {
+    width: auto;
+    background-color: brown;
+}
+
+#closeBox {
+    width: auto;
+    background-color: brown;
+}
+
+#closeBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+#closeBtn p {
+    margin: 0;
+    padding-top: 15px;
 }
 
 #pop-up {
@@ -26,11 +49,22 @@
     flex-direction: column;
 }
 
-#knapper {
+#upperSection {
+    width: 95%;
+    height: 25%;
+    margin: 5px;
+    background-color: antiquewhite;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-button {
-    background-color: crimson;
+#lowerSection {
+    width: 95%;
+    height: 70%;
+    margin: 5px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 }

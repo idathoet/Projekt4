@@ -1,4 +1,11 @@
-.knap {
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.option {
     width: 200px;
     background-color: aqua;
     margin: 5px;
@@ -14,35 +21,35 @@
 }
 
 #backBox {
-    width: auto;
-    background-color: brown;
+    width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 #closeBox {
-    width: auto;
-    background-color: brown;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #closeBtn {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    margin: 5px;
     background-color: cadetblue;
     text-align: center;
-}
-
-#closeBtn p {
-    margin: 0;
-    padding-top: 15px;
 }
 
 #pop-up {
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 20px;
     width: 500px;
-    height: 500px;
+    height: 70%;
     background-color: burlywood;
+    border: solid black 3px;
+    border-radius: 12px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -51,18 +58,26 @@
 
 #upperSection {
     width: 95%;
-    height: 25%;
+    height: 8%;
     margin: 5px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
     justify-content: space-evenly;
 }
 
+#midSection {
+    width: 95%;
+    height: 20%;
+    margin: 5px;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
 #lowerSection {
     width: 95%;
-    height: 70%;
+    height: 65%;
     margin: 5px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
     justify-content: start;
     align-items: center;

@@ -17,18 +17,18 @@ function start() {
 
     //Skaber trin 1-knapper
     for (i = 0; i < 2; i++) {
-        let page = document.createElement("DIV");
+        let page = document.createElement("BUTTON");
         page.setAttribute("id", "knap" + (i + 1));
-        page.setAttribute("class", "knap");
+        page.setAttribute("class", "option");
         page.setAttribute("onclick", "knap(" + (i + 1) + ")");
         document.getElementById("lowerSection").appendChild(page);
     }
 
     //Skaber luk-knap
-    let luk = document.createElement("DIV");
+    let luk = document.createElement("BUTTON");
     luk.setAttribute("id", "closeBtn");
-    luk.innerHTML = "<p>X</p>";
-    console.log(luk);
+    luk.setAttribute("onclick", "closeBtn()");
+    luk.innerHTML = "X";
     document.getElementById("closeBox").appendChild(luk);
 
     lastVisit.push(document.getElementById("lowerSection").innerHTML)
@@ -37,13 +37,14 @@ function start() {
 function knap(x) {
     //Tjekker om der er en backBtn-knap - hvis ikke skaber den en
     if (!document.getElementById("backBtn")) {
-        let backBtn = document.createElement("DIV");
+        let backBtn = document.createElement("BUTTON");
         backBtn.setAttribute("id", "backBtn");
         backBtn.setAttribute("onclick", "backBtn()");
         backBtn.innerHTML = "Tilbage";
         document.getElementById("backBox").appendChild(backBtn);
     }
 
+    //If-udsagn, som skaber en ny side alt efter hvilken knap, der trykkes på
     if (x == 1) {
         //Giver hver knap et unikt ID
         let y = 3;
@@ -51,11 +52,14 @@ function knap(x) {
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
 
-        //Creator
+        //Skaber titel
+        document.getElementById("titel").innerHTML = "Søger du...";
+
+        //Skaber valgmuligheder
         for (i = 0; i < 5; i++) {
-            let page = document.createElement("DIV");
+            let page = document.createElement("BUTTON");
             page.setAttribute("id", "knap" + (i + y));
-            page.setAttribute("class", "knap");
+            page.setAttribute("class", "option");
             page.setAttribute("onclick", "knap(" + (i + y) + ")");
             document.getElementById("lowerSection").appendChild(page);
         }
@@ -64,13 +68,50 @@ function knap(x) {
         lastVisit.push(document.getElementById("lowerSection").innerHTML);
         history.push(1);
     } else if (x == 2) {
-//Anton
+        //Giver hver knap et unikt ID
+        let y = 8;
 
+        //Resetter
+        document.getElementById("lowerSection").innerHTML = "";
+
+        //Skaber titel
+        document.getElementById("titel").innerHTML = "Søger du...";
+
+        //Skaber valgmuligheder
+        for (i = 0; i < 4; i++) {
+            let page = document.createElement("BUTTON");
+            page.setAttribute("id", "knap" + (i + y));
+            page.setAttribute("class", "option");
+            page.setAttribute("onclick", "knap(" + (i + y) + ")");
+            document.getElementById("lowerSection").appendChild(page);
+        }
+
+        //Gemmer historik
+        lastVisit.push(document.getElementById("lowerSection").innerHTML);
+        history.push(1);
     } else if (x == 3) {
-//Ida
+        //Giver hver knap et unikt ID
+        let y = 12;
 
+        //Resetter
+        document.getElementById("lowerSection").innerHTML = "";
+
+        //Skaber titel
+        document.getElementById("titel").innerHTML = "Søger du...";
+
+        //Skaber valgmuligheder
+        for (i = 0; i < 2; i++) {
+            let page = document.createElement("BUTTON");
+            page.setAttribute("id", "knap" + (i + y));
+            page.setAttribute("class", "option");
+            page.setAttribute("onclick", "knap(" + (i + y) + ")");
+            document.getElementById("lowerSection").appendChild(page);
+        }
+
+        //Gemmer historik
+        lastVisit.push(document.getElementById("lowerSection").innerHTML);
+        history.push(1);
     } else if (x == 8) {
-//
 
     }
 }
@@ -131,10 +172,14 @@ function backBtn() {
     document.getElementById("lowerSection").innerHTML = lastVisit[history.length];
 }
 
-function delBackBtn () {
+function delBackBtn() {
     if (document.getElementById("knap1")) {
         document.getElementById("backBox").innerHTML = "";
     }
+}
+
+function closeBtn() {
+    document.getElementById("wrapper").style.display = "none";
 }
 
 //Ved hvert klik (uanset placering) kører funktionen nameBtn() (PÅ INGEN MÅDE OPTIMALT)

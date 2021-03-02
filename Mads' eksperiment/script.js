@@ -52,7 +52,7 @@ function knap(x) {
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
 
-        //Skaber titel
+        // //Skaber titel
         document.getElementById("titel").innerHTML = "Søger du...";
 
         //Skaber valgmuligheder

@@ -16,16 +16,36 @@ nav{
   justify-content: space-around;
   padding-top: 25px;
 }
-h1{
+
+.font1{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: bold;
   text-align: center;
-  font-size: 45px;
+  font-size: 29px;
   margin: 25px;
 }
-h2{
+.font2{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: bold;
   text-align: center;
-  font-size: 35px;
+  font-size: 16px;
   margin: 25px;
 }
+
+.font3{
+  font-family: 'Roboto', sans-serif;
+  text-align:center;
+  font-size:13px;
+  margin: 25px;
+}
+
+.font4{
+  font-family: 'Roboto',sans-serif;
+  text-align:center;
+  font-size:18px;
+  margin:25px;
+}
+
 p{
   text-align: center;
   font-size: 20px;
@@ -51,8 +71,9 @@ html {
   grid-template-areas:
   "element snippet"
   "beskrivelse snippet";
-  margin: 50px 400px;
+  margin: 50px 0;
   margin-bottom: 10px;
+  align-self: center;
 }
 
 .element {
@@ -66,7 +87,7 @@ html {
   border-width: 1px;
   width: 500px;
   font-size: 15px;
-  padding: 15px 0;
+  padding: 15px 3px;
   border-radius: 10px;
 }
 
@@ -76,7 +97,7 @@ html {
   color: #F2F0ED;
   width: 400px;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
 }
 
@@ -86,11 +107,13 @@ html {
   width: 250px;
   border-radius: 10px;
   padding: 25px 0;
+
 }
 
 .white {
   color: #303031;
   background-color: #FFFFFF;
+
 }
 
 .white-text{
@@ -99,23 +122,19 @@ html {
 
 .blue {
 
-  background-color: #57a0d4;
-}
-
-.grey {
-  background-color: #303031;
+  background-color: #56A0D3;
 }
 
 .red {
-  background-color: #cc1336;
+  background-color: #cc0033;
 }
 
-.green {
-  background-color: #68bd96;
+.black {
+  background-color: #303030;
 }
 
-.orange {
-  background-color: #D38256;
+.lightblue {
+  background-color: #F5FBFF;
 }
 
 
@@ -127,11 +146,20 @@ html {
 }
 .button1 {
   background-color: #56A0D3;
-  font-size: 30px;
-  height: auto;
-  max-width: 100px;
-  margin: 30px;
+  font-size: 18px;
+  color: white;
+  width: 196px;
+  height: 46px;
   text-align: center;
+  align-items: center;
+  display: flex;
+  border-radius: 23px;
+}
+
+.button1 p {
+  font-family: "roboto", sans-serif;
+  align-self: center;
+  margin: auto;
 }
 
 .button2 {

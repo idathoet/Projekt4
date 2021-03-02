@@ -17,10 +17,14 @@ button {
 }
 
 #backBtn {
-    width: 100px;
-    background-color: crimson;
+    width: auto;
+    height: 19px;
     margin: 5px;
-    text-align: center;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: left;
+    margin-top: 15px;
+    text-decoration: underline;
 }
 
 #backBox {
@@ -36,12 +40,13 @@ button {
 }
 
 #closeBtn {
-    width: 30px;
-    height: 30px;
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
     margin: 5px;
-    background-color: cadetblue;
-    text-align: center;
+    background-color: #303030;
+    font-size: 25px;
+    color: #FFFFFF;
 }
 
 #pop-up {
@@ -73,7 +78,7 @@ button {
     height: 20%;
     margin: 5px;
     /* background-color: antiquewhite; */
-    text-align: center;
+    text-align: left;
 }
 
 #lowerSection {

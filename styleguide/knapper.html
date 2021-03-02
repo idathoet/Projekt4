@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale1.0">
     <title>Knapper</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav>
@@ -15,12 +17,31 @@
     </nav>
     <div class="container">
       <div class="subcon">
-        <div class="button1 element">Knap 1</div>
-        <div class="beskrivelse">tekst 1</div>
-        <div class="snippet">snippet her</div>
+        <div class="button1 element"><p>Assistent knap</p></div>
+        <div class="beskrivelse">Denne knap benyttes i toppen af hjemmesiden til at åbne wizarden</div>
+        <div class="snippet"> HTML:<br> &lt;div class="button1"&gt;&lt;p&gt;Assistent knap&lt;/p&gt;&lt;/div&gt; <br><br>
+          CSS:<br>
+          .button1 { <br>
+            background-color: #56A0D3;<br>
+            font-size: 18px;<br>
+            color: white;<br>
+            width: 196px;<br>
+            height: 46px;<br>
+            text-align: center;<br>
+            align-items: center;<br>
+            display: flex;<br>
+            border-radius: 23px;<br>
+          }
+
+          .button1 p {
+            font-family: "roboto", sans-serif;
+            align-self: center;
+            margin: auto;
+          }
+        </div>
       </div>
       <div class="subcon">
-        <div class="button2 element">Knap 2</div>
+        <div class="button2 element"></div>
         <div class="beskrivelse">tekst 2</div>
         <div class="snippet">Blablabla</div>
       </div>

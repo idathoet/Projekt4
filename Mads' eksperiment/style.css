@@ -77,12 +77,21 @@ button {
 }
 
 #lowerSection {
-    width: 95%;
+    width: auto;
     height: 65%;
     margin: 5px;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    left: -15%;
+
+}
+
+#maskot {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
 }

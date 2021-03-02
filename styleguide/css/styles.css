@@ -107,11 +107,13 @@ html {
   width: 250px;
   border-radius: 10px;
   padding: 25px 0;
+
 }
 
 .white {
   color: #303031;
   background-color: #FFFFFF;
+
 }
 
 .white-text{
@@ -120,23 +122,19 @@ html {
 
 .blue {
 
-  background-color: #57a0d4;
-}
-
-.grey {
-  background-color: #303031;
+  background-color: #56A0D3;
 }
 
 .red {
-  background-color: #cc1336;
+  background-color: #cc0033;
 }
 
-.green {
-  background-color: #68bd96;
+.black {
+  background-color: #303030;
 }
 
-.orange {
-  background-color: #D38256;
+.lightblue {
+  background-color: #F5FBFF;
 }
 
 

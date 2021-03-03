@@ -208,3 +208,42 @@ html {
   background-color: white;
   transform: rotate(90deg);
 }
+
+.button4 {
+  color: #303030;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+.button4 p {
+  font-family: "Roboto Condensed" sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline;
+  position: relative;
+  left: 15px;
+}
+.line1 {
+  width: 12px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+}
+
+.line2 {
+  width: 8px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+.line3 {
+  width: 8px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -2px;
+}

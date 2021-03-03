@@ -90,7 +90,30 @@ function knap(x) {
         //Gemmer historik
         lastVisit.push(document.getElementById("lowerSection").innerHTML);
         history.push(1);
-    } else if (x == 3) {
+    } else if (x == 4) {
+        //Giver hver knap et unikt ID
+        let y = 14;
+
+        //Resetter
+        document.getElementById("lowerSection").innerHTML = "";
+        document.getElementById("breadcrumb").innerHTML = "";
+
+        // //Skaber titel
+        document.getElementById("titel").innerHTML = "Søger du...";
+
+        //Skaber valgmuligheder
+        for (i = 0; i < 4; i++) {
+            let page = document.createElement("BUTTON");
+            page.setAttribute("id", "knap" + (i + y));
+            page.setAttribute("class", "option");
+            page.setAttribute("onclick", "knap(" + (i + y) + ")");
+            document.getElementById("lowerSection").appendChild(page);
+        }
+
+        //Gemmer historik
+        lastVisit.push(document.getElementById("lowerSection").innerHTML);
+        history.push(1);
+    } else if (x == 11) {
         //Giver hver knap et unikt ID
         let y = 12;
 
@@ -113,8 +136,6 @@ function knap(x) {
         //Gemmer historik
         lastVisit.push(document.getElementById("lowerSection").innerHTML);
         history.push(1);
-    } else if (x == 8) {
-
     }
 }
 
@@ -159,7 +180,16 @@ function nameBtn() {
         document.getElementById("knap13").innerHTML = "Karrieremuligheder hos os (13)";
     }
     if (document.getElementById("knap14")) {
-        document.getElementById("knap14").innerHTML = "";
+        document.getElementById("knap14").innerHTML = "Bæredygtighed & socialt ansvar (14)";
+    }
+    if (document.getElementById("knap15")) {
+        document.getElementById("knap15").innerHTML = "Sikkerhed (15)";
+    }
+    if (document.getElementById("knap16")) {
+        document.getElementById("knap16").innerHTML = "Os generelt (16)";
+    }
+    if (document.getElementById("knap17")) {
+        document.getElementById("knap17").innerHTML = "Indkøb af robotter (17)";
     }
 }
 
@@ -191,7 +221,7 @@ function breadNav() {
         let btn1 = document.createElement("DIV");
         btn1.setAttribute("id", "start");
         btn1.setAttribute("class", "breadcrumb");
-        btn1.innerHTML = "Start";
+        btn1.innerHTML = "Start" + " -";
         document.getElementById("breadcrumb").appendChild(btn1);
         let btn2 = document.createElement("DIV");
         btn2.setAttribute("id", "erhverv");
@@ -204,12 +234,12 @@ function breadNav() {
         let btn1 = document.createElement("DIV");
         btn1.setAttribute("id", "start");
         btn1.setAttribute("class", "breadcrumb");
-        btn1.innerHTML = "Start";
+        btn1.innerHTML = "Start -";
         document.getElementById("breadcrumb").appendChild(btn1);
         let btn2 = document.createElement("DIV");
         btn2.setAttribute("id", "erhverv");
         btn2.setAttribute("class", "breadcrumb");
-        btn2.innerHTML = "Erhverv";
+        btn2.innerHTML = "Erhverv -";
         document.getElementById("breadcrumb").appendChild(btn2);
         let btn3 = document.createElement("DIV");
         btn3.setAttribute("id", "job");

@@ -20,6 +20,18 @@ h1 {
   font-family:"Roboto Condensed", sans-serif;
 }
 
+#breadcrumb {
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumb {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 13px;
+    margin: 2px;
+}
+
 #backBtn {
   font-family: "Roboto Condensed" sans-serif;
   font-size: 16px;
@@ -92,16 +104,11 @@ h1 {
     width: 95%;
     height: 65%;
     margin: 5px;
-<<<<<<< HEAD
     /*background-color: antiquewhite;*/
-=======
-    /* background-color: antiquewhite; */
->>>>>>> 0c036e15c8c0465802ffa56f2f858ff42a9306da
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-<<<<<<< Updated upstream
     position: relative;
     left: -15%;
 }
@@ -111,6 +118,4 @@ h1 {
   right: 0%;
   bottom: 0;
   width: 33%;
-=======
->>>>>>> Stashed changes
 }

@@ -89,7 +89,7 @@ button {
     width: auto;
     height: 65%;
     margin: 5px;
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     display: flex;
     justify-content: start;
     align-items: center;

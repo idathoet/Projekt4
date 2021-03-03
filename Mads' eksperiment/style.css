@@ -47,10 +47,10 @@ button {
     margin-left: 205px;
     background-color: #303030;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #F2F0ED;
     position: relative;
-    top:-35px;
-    right:-35px;
+    top:-40px;
+    right:-40px;
 }
 
 #pop-up {
@@ -82,18 +82,23 @@ button {
     height: 20%;
     margin: 5px;
     /* background-color: antiquewhite; */
-    text-align: left;
+    text-align: center;
 }
 
 #lowerSection {
-    width: auto;
+    width: 95%;
     height: 65%;
     margin: 5px;
+<<<<<<< HEAD
     /*background-color: antiquewhite;*/
+=======
+    /* background-color: antiquewhite; */
+>>>>>>> 0c036e15c8c0465802ffa56f2f858ff42a9306da
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
+<<<<<<< Updated upstream
     position: relative;
     left: -15%;
 
@@ -104,4 +109,6 @@ button {
   right: 0%;
   bottom: 0;
   width: 33%;
+=======
+>>>>>>> Stashed changes
 }

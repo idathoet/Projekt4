@@ -7,24 +7,27 @@ button {
 
 .option {
     background-color: #56A0D3;
+    box-shadow: 2px 3px rgba(0,0,0,0.2);
     font-size: 18px;
-    font-family: roboto;
+    font-family: "roboto", sans-serif; align-self: center; margin: auto;
     color: white;
     width: 367px;
     height: 46px;
     margin-bottom: 25px;
     border-radius: 23px
 }
+h1 {
+  font-family:"Roboto Condensed", sans-serif;
+}
 
 #backBtn {
-    width: auto;
-    height: 19px;
-    margin: 5px;
-    background-color: transparent;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-align: left;
-    margin-top: 15px;
-    text-decoration: underline;
+  font-family: "Roboto Condensed" sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: relative;
+  left: 15px;
+  background-color: transparent;
 }
 
 #backBox {
@@ -47,10 +50,10 @@ button {
     margin-left: 205px;
     background-color: #303030;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #F2F0ED;
     position: relative;
-    top:-35px;
-    right:-35px;
+    top:-40px;
+    right:-40px;
 }
 
 #pop-up {
@@ -59,7 +62,7 @@ button {
     right: 20px;
     width: 636px;
     height: 611px;
-    background-color: burlywood;
+    background-color: #F5FBFF;
     border: solid black 3px;
     border-radius: 12px;
     display: flex;
@@ -82,25 +85,32 @@ button {
     height: 20%;
     margin: 5px;
     /* background-color: antiquewhite; */
-    text-align: left;
+    text-align: center;
 }
 
 #lowerSection {
-    width: auto;
+    width: 95%;
     height: 65%;
     margin: 5px;
-    background-color: antiquewhite;
+<<<<<<< HEAD
+    /*background-color: antiquewhite;*/
+=======
+    /* background-color: antiquewhite; */
+>>>>>>> 0c036e15c8c0465802ffa56f2f858ff42a9306da
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
+<<<<<<< Updated upstream
     position: relative;
     left: -15%;
-
 }
 
 #maskot {
   position: absolute;
   right: 0%;
   bottom: 0;
+  width: 33%;
+=======
+>>>>>>> Stashed changes
 }

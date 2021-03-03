@@ -107,8 +107,12 @@ html {
   width: 250px;
   border-radius: 10px;
   padding: 25px 0;
+  border-style: solid;
+  border-width: thin;
+  border-color: #303030;
 
 }
+
 
 .white {
   color: #303031;

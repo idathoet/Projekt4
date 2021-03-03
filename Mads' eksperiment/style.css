@@ -8,7 +8,7 @@ button {
 .option {
     background-color: #56A0D3;
     font-size: 18px;
-    font-family: roboto;
+    font-family: "roboto", sans-serif; align-self: center; margin: auto;
     color: white;
     width: 367px;
     height: 46px;

@@ -17,14 +17,13 @@ button {
 }
 
 #backBtn {
-    width: auto;
-    height: 19px;
-    margin: 5px;
-    background-color: transparent;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-align: left;
-    margin-top: 15px;
-    text-decoration: underline;
+  font-family: "Roboto Condensed" sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: relative;
+  left: 15px;
+  background-color: transparent;
 }
 
 #backBox {

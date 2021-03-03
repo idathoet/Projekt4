@@ -38,7 +38,7 @@ function start() {
     if (!document.getElementById("start")) {
         let bread = document.createElement("BUTTON");
         bread.setAttribute("id", "start");
-        bread.setAttribute("onclick", "start()")
+        bread.setAttribute("onclick", "breadNav(1)");
         bread.innerHTML = "Start";
         document.getElementById("breadcrumb").appendChild(bread);
     }
@@ -64,7 +64,6 @@ function knap(x) {
 
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
-        document.getElementById("breadcrumb").innerHTML = "";
 
         // //Skaber titel
         document.getElementById("titel").innerHTML = "Søger du...";
@@ -78,13 +77,13 @@ function knap(x) {
             document.getElementById("lowerSection").appendChild(page);
         }
 
-        document.getElementById("breadcrumb").innerHTML = breadcrumbs;
+        // document.getElementById("breadcrumb").innerHTML = breadcrumbs;
 
         //Tilføjer spor til breadcrumbs, hvis der ikke allerede er en
         if (!document.getElementById("erhverv")) {
             let bread = document.createElement("BUTTON");
             bread.setAttribute("id", "erhverv");
-            bread.setAttribute("onclick", "knap(1)");
+            bread.setAttribute("onclick", "breadNav(2)");
             bread.innerHTML = "Erhverv";
             document.getElementById("breadcrumb").appendChild(bread);
             breadcrumbs.push(document.getElementById("erhverv"));
@@ -194,6 +193,15 @@ function nameBtn() {
     }
     if (document.getElementById("knap14")) {
         document.getElementById("knap14").innerHTML = "";
+    }
+}
+
+function breadNav(x) {
+    document.getElementById("breadcrumb").innerHTML = "";
+    if (x == 1) {
+        start();
+    } else if (x == 2) {
+        knap(1);
     }
 }
 

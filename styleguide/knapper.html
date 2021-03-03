@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav>
@@ -103,6 +104,53 @@
             background-color: white;<br>
             transform: rotate(90deg);<br>
           }<br>
+      </div>
+    </div>
+    <div class="subcon">
+      <div class="button4 element"><div class="line1"><div class="line2"></div><div class="line3"></div></div><p>Tilbage</p></div>
+      <div class="beskrivelse">Denne knap benyttes til at</div>
+      <div class="snippet">
+        HTML: <br>
+        &lt;div class="button4 element"&gt;&lt;div class="line1"&gt;&lt;div class="line2"&gt;&lt;/div&gt;&lt;div class="line3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;Tilbage&lt;/p&gt;&lt;/div&gt;
+        CSS:<br>
+        .button4 { <br>
+          color: #303030;<br>
+          text-align: center;<br>
+          align-items: center;<br>
+          display: flex;<br>
+        }<br><br>
+        .button4 p {<br>
+          font-family: "Roboto Condensed" sans-serif;<br>
+          font-size: 16px;<br>
+          font-weight: 700;<br>
+          text-decoration: underline;<br>
+          position: relative;<br>
+          left: 15px;<br>
+        }<br><br>
+        .line1 {<br>
+          width: 12px;<br>
+          height: 2px;<br>
+          background-color: #303030;<br>
+          position: absolute;<br>
+        }<br><br>
+
+        .line2 {<br>
+          width: 8px;<br>
+          height: 2px;<br>
+          background-color: #303030;<br>
+          position: absolute;<br>
+          transform: rotate(45deg);<br>
+          top: 2px;<br>
+        }<br><br>
+
+        .line3 {<br>
+          width: 8px;<br>
+          height: 2px;<br>
+          background-color: #303030;<br>
+          position: absolute;<br>
+          transform: rotate(-45deg);<br>
+          top: -2px;<br>
+        }
       </div>
     </div>
   </body>

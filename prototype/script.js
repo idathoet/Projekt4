@@ -1,5 +1,11 @@
 console.log("JS is running...")
 
+//Ved hvert klik (uanset placering) kører forskellige funktioner
+document.body.addEventListener("click", nameBtn);
+document.body.addEventListener("click", delBackBtn);
+document.body.addEventListener("click", breadNav);
+document.body.addEventListener("click", giveTitle);
+
 //Skaber array til at gemme på innerHTML
 let lastVisit = [];
 
@@ -34,6 +40,7 @@ function start() {
     lastVisit.push(document.getElementById("lowerSection").innerHTML);
 }
 
+//Hovedfunktion til knapper
 function knap(x) {
     //Tjekker om der er en backBtn-knap - hvis ikke skaber den en
     if (!document.getElementById("backBtn")) {
@@ -52,9 +59,6 @@ function knap(x) {
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
         document.getElementById("breadcrumb").innerHTML = "";
-
-        // //Skaber titel
-        document.getElementById("titel").innerHTML = "Søger du...";
 
         //Skaber valgmuligheder
         for (i = 0; i < 5; i++) {
@@ -75,9 +79,6 @@ function knap(x) {
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
 
-        //Skaber titel
-        document.getElementById("titel").innerHTML = "Søger du...";
-
         //Skaber valgmuligheder
         for (i = 0; i < 4; i++) {
             let page = document.createElement("BUTTON");
@@ -90,16 +91,13 @@ function knap(x) {
         //Gemmer historik
         lastVisit.push(document.getElementById("lowerSection").innerHTML);
         history.push(1);
-    } else if (x == 4) {
+    } else if (x == 3) {
         //Giver hver knap et unikt ID
         let y = 14;
 
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
         document.getElementById("breadcrumb").innerHTML = "";
-
-        // //Skaber titel
-        document.getElementById("titel").innerHTML = "Søger du...";
 
         //Skaber valgmuligheder
         for (i = 0; i < 4; i++) {
@@ -121,9 +119,6 @@ function knap(x) {
         document.getElementById("lowerSection").innerHTML = "";
         document.getElementById("breadcrumb").innerHTML = "";
 
-        // //Skaber titel
-        document.getElementById("titel").innerHTML = "Søger du...";
-
         //Skaber valgmuligheder
         for (i = 0; i < 2; i++) {
             let page = document.createElement("BUTTON");
@@ -139,60 +134,86 @@ function knap(x) {
     }
 }
 
+//Funktion, der tjekker om en specifik knap, baseret på id, findes, og hvis den gør, sætter den tekst ind i knappens tekstfelt
 function nameBtn() {
     if (document.getElementById("knap1")) {
-        document.getElementById("knap1").innerHTML = "Erhverv (1)";
+        document.getElementById("knap1").innerHTML = "Erhverv";
     }
     if (document.getElementById("knap2")) {
-        document.getElementById("knap2").innerHTML = "Privat (2)";
+        document.getElementById("knap2").innerHTML = "Privat";
     }
     if (document.getElementById("knap3")) {
-        document.getElementById("knap3").innerHTML = "Info om job & uddannelse (3)";
+        document.getElementById("knap3").innerHTML = "Info om os og vores robotter";
     }
     if (document.getElementById("knap4")) {
-        document.getElementById("knap4").innerHTML = "Info om os, robotter & indkøb (4)";
+        document.getElementById("knap4").innerHTML = "At se robotter i aktion";
     }
     if (document.getElementById("knap5")) {
-        document.getElementById("knap5").innerHTML = "At se brancherelevante cases (5)";
+        document.getElementById("knap5").innerHTML = "At designe en robot";
     }
     if (document.getElementById("knap6")) {
-        document.getElementById("knap6").innerHTML = "At se en robot i aktion (6)";
+        document.getElementById("knap6").innerHTML = "Info om job og uddannelse";
     }
     if (document.getElementById("knap7")) {
-        document.getElementById("knap7").innerHTML = "At få hjælp til problemer (7)";
+        document.getElementById("knap7").innerHTML = "At få hjælp til problemer";
     }
     if (document.getElementById("knap8")) {
-        document.getElementById("knap8").innerHTML = "Info om os og vores robotter (8)";
+        document.getElementById("knap8").innerHTML = "Info om os og vores robotter";
     }
     if (document.getElementById("knap9")) {
-        document.getElementById("knap9").innerHTML = "At se robotterne i aktion (9)";
+        document.getElementById("knap9").innerHTML = "At se robotterne i aktion";
     }
     if (document.getElementById("knap10")) {
-        document.getElementById("knap10").innerHTML = "At prøve at designe en robot (10)";
+        document.getElementById("knap10").innerHTML = "At designe en robot";
     }
     if (document.getElementById("knap11")) {
-        document.getElementById("knap11").innerHTML = "Info om job & uddannelse (11)";
+        document.getElementById("knap11").innerHTML = "Info om job & uddannelse";
     }
     if (document.getElementById("knap12")) {
-        document.getElementById("knap12").innerHTML = "Kurser & uddannelse (12)";
+        document.getElementById("knap12").innerHTML = "Kurser & uddannelse";
     }
     if (document.getElementById("knap13")) {
-        document.getElementById("knap13").innerHTML = "Karrieremuligheder hos os (13)";
+        document.getElementById("knap13").innerHTML = "Karrieremuligheder";
     }
     if (document.getElementById("knap14")) {
-        document.getElementById("knap14").innerHTML = "Bæredygtighed & socialt ansvar (14)";
+        document.getElementById("knap14").innerHTML = "Socialt ansvar";
     }
     if (document.getElementById("knap15")) {
-        document.getElementById("knap15").innerHTML = "Sikkerhed (15)";
+        document.getElementById("knap15").innerHTML = "Sikkerhed";
     }
     if (document.getElementById("knap16")) {
-        document.getElementById("knap16").innerHTML = "Os generelt (16)";
+        document.getElementById("knap16").innerHTML = "Os generelt";
     }
     if (document.getElementById("knap17")) {
-        document.getElementById("knap17").innerHTML = "Indkøb af robotter (17)";
+        document.getElementById("knap17").innerHTML = "Indkøb af robotter";
     }
 }
 
+//Funktion, der tjekker om en specifik knap, baseret på id, findes, og hvis den gør, ændrer den titlen på siden
+function giveTitle() {
+    if (document.getElementById("knap1")) {
+        document.getElementById("titel").innerHTML = "";
+        document.getElementById("titel").innerHTML = "Er du...";
+    } 
+    if (document.getElementById("knap3")) {
+        document.getElementById("titel").innerHTML = "";
+        document.getElementById("titel").innerHTML = "Ønsker du...";
+    }
+    if (document.getElementById("knap14")) {
+        document.getElementById("titel").innerHTML = "";
+        document.getElementById("titel").innerHTML = "Ønsker du info om...";
+    }
+    if (document.getElementById("knap8")) {
+        document.getElementById("titel").innerHTML = "";
+        document.getElementById("titel").innerHTML = "Ønsker du...";
+    }
+    if (document.getElementById("knap12")) {
+        document.getElementById("titel").innerHTML = "";
+        document.getElementById("titel").innerHTML = "Ønsker du info om...";
+    }
+}
+
+//Funktion, der håndterer tilbage-knappen
 function backBtn() {
     //Resetter indhold
     document.getElementById("lowerSection").innerHTML = "";
@@ -207,6 +228,7 @@ function backBtn() {
     document.getElementById("lowerSection").innerHTML = lastVisit[history.length];
 }
 
+//Funktion, der skaber brødkrummer, baseret på hvilken knap der står øverst
 function breadNav() {
     if (document.getElementById("knap1")) {
         document.getElementById("breadcrumb").innerHTML = "";
@@ -221,7 +243,7 @@ function breadNav() {
         let btn1 = document.createElement("DIV");
         btn1.setAttribute("id", "start");
         btn1.setAttribute("class", "breadcrumb");
-        btn1.innerHTML = "Start" + " -";
+        btn1.innerHTML = "Start  -";
         document.getElementById("breadcrumb").appendChild(btn1);
         let btn2 = document.createElement("DIV");
         btn2.setAttribute("id", "erhverv");
@@ -229,37 +251,67 @@ function breadNav() {
         btn2.innerHTML = "Erhverv";
         document.getElementById("breadcrumb").appendChild(btn2);
     }
+    if (document.getElementById("knap14")) {
+        document.getElementById("breadcrumb").innerHTML = "";
+        let btn1 = document.createElement("DIV");
+        btn1.setAttribute("id", "start");
+        btn1.setAttribute("class", "breadcrumb");
+        btn1.innerHTML = "Start  -";
+        document.getElementById("breadcrumb").appendChild(btn1);
+        let btn2 = document.createElement("DIV");
+        btn2.setAttribute("id", "erhverv");
+        btn2.setAttribute("class", "breadcrumb");
+        btn2.innerHTML = "Erhverv  -";
+        document.getElementById("breadcrumb").appendChild(btn2);
+        let btn3 = document.createElement("DIV");
+        btn3.setAttribute("id", "indkøb");
+        btn3.setAttribute("class", "breadcrumb");
+        btn3.innerHTML = "Os & vores robotter";
+        document.getElementById("breadcrumb").appendChild(btn3);
+    }
+    if (document.getElementById("knap8")) {
+        document.getElementById("breadcrumb").innerHTML = "";
+        let btn1 = document.createElement("DIV");
+        btn1.setAttribute("id", "start");
+        btn1.setAttribute("class", "breadcrumb");
+        btn1.innerHTML = "Start  -";
+        document.getElementById("breadcrumb").appendChild(btn1);
+        let btn2 = document.createElement("DIV");
+        btn2.setAttribute("id", "privat");
+        btn2.setAttribute("class", "breadcrumb");
+        btn2.innerHTML = "Privat";
+        document.getElementById("breadcrumb").appendChild(btn2);
+    }
     if (document.getElementById("knap12")) {
         document.getElementById("breadcrumb").innerHTML = "";
         let btn1 = document.createElement("DIV");
         btn1.setAttribute("id", "start");
         btn1.setAttribute("class", "breadcrumb");
-        btn1.innerHTML = "Start -";
+        btn1.innerHTML = "Start  -";
         document.getElementById("breadcrumb").appendChild(btn1);
         let btn2 = document.createElement("DIV");
-        btn2.setAttribute("id", "erhverv");
+        btn2.setAttribute("id", "privat");
         btn2.setAttribute("class", "breadcrumb");
-        btn2.innerHTML = "Erhverv -";
+        btn2.innerHTML = "Privat  -";
         document.getElementById("breadcrumb").appendChild(btn2);
         let btn3 = document.createElement("DIV");
-        btn3.setAttribute("id", "job");
+        btn3.setAttribute("id", "indkøb");
         btn3.setAttribute("class", "breadcrumb");
-        btn3.innerHTML = "Job";
+        btn3.innerHTML = "Kurser & karriere";
         document.getElementById("breadcrumb").appendChild(btn3);
     }
 }
 
+//Funktion, der tjekker om knappen med id "knap1" findes, og hvis den gør, sletter den tilbage-knappen
 function delBackBtn() {
     if (document.getElementById("knap1")) {
         document.getElementById("backBox").innerHTML = "";
     }
 }
 
+//Funktion, der ændrer pop-uppens display til none, samt resetter lastVisit og history-arrays
 function closeBtn() {
     document.getElementById("wrapper").style.display = "none";
+    lastVisit = [];
+    history = [];
 }
-
-//Ved hvert klik (uanset placering) kører funktionen nameBtn() (PÅ INGEN MÅDE OPTIMALT)
-document.body.addEventListener("click", nameBtn);
-document.body.addEventListener("click", delBackBtn);
-document.body.addEventListener("click", breadNav);

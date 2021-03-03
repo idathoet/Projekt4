@@ -6,9 +6,6 @@ let lastVisit = [];
 //Initierer en array, som holder på info om antal besøgte sider (pushes i knap() og poppes i backBtn())
 let history = [];
 
-//Breadcrumbs array
-let breadcrumbs = [];
-
 function start() {
     //Resetter
     document.getElementById("backBox").innerHTML = "";
@@ -34,16 +31,6 @@ function start() {
     luk.innerHTML = "X";
     document.getElementById("closeBox").appendChild(luk);
 
-    //Tilføjer til breadcrumb
-    if (!document.getElementById("start")) {
-        let bread = document.createElement("BUTTON");
-        bread.setAttribute("id", "start");
-        bread.setAttribute("onclick", "breadNav(1)");
-        bread.innerHTML = "Start";
-        document.getElementById("breadcrumb").appendChild(bread);
-    }
-
-    breadcrumbs.push(document.getElementById("breadcrumb").innerHTML);
     lastVisit.push(document.getElementById("lowerSection").innerHTML);
 }
 
@@ -64,6 +51,7 @@ function knap(x) {
 
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
+        document.getElementById("breadcrumb").innerHTML = "";
 
         // //Skaber titel
         document.getElementById("titel").innerHTML = "Søger du...";
@@ -77,21 +65,8 @@ function knap(x) {
             document.getElementById("lowerSection").appendChild(page);
         }
 
-        // document.getElementById("breadcrumb").innerHTML = breadcrumbs;
-
-        //Tilføjer spor til breadcrumbs, hvis der ikke allerede er en
-        if (!document.getElementById("erhverv")) {
-            let bread = document.createElement("BUTTON");
-            bread.setAttribute("id", "erhverv");
-            bread.setAttribute("onclick", "breadNav(2)");
-            bread.innerHTML = "Erhverv";
-            document.getElementById("breadcrumb").appendChild(bread);
-            breadcrumbs.push(document.getElementById("erhverv"));
-        }
-
         //Gemmer historik
         lastVisit.push(document.getElementById("lowerSection").innerHTML);
-        // breadcrumbs.push(document.getElementById("breadcrumb").innerHTML);
         history.push(1);
     } else if (x == 2) {
         //Giver hver knap et unikt ID
@@ -121,8 +96,9 @@ function knap(x) {
 
         //Resetter
         document.getElementById("lowerSection").innerHTML = "";
+        document.getElementById("breadcrumb").innerHTML = "";
 
-        //Skaber titel
+        // //Skaber titel
         document.getElementById("titel").innerHTML = "Søger du...";
 
         //Skaber valgmuligheder
@@ -132,15 +108,6 @@ function knap(x) {
             page.setAttribute("class", "option");
             page.setAttribute("onclick", "knap(" + (i + y) + ")");
             document.getElementById("lowerSection").appendChild(page);
-        }
-
-        //Tilføjer spor til breadcrumbs, hvis der ikke allerede er en
-        if (!document.getElementById("job")) {
-            let bread = document.createElement("BUTTON");
-            bread.setAttribute("id", "job");
-            bread.setAttribute("onclick", "knap(1)");
-            bread.innerHTML = "Job";
-            document.getElementById("breadcrumb").appendChild(bread);
         }
 
         //Gemmer historik
@@ -196,19 +163,9 @@ function nameBtn() {
     }
 }
 
-function breadNav(x) {
-    document.getElementById("breadcrumb").innerHTML = "";
-    if (x == 1) {
-        start();
-    } else if (x == 2) {
-        knap(1);
-    }
-}
-
 function backBtn() {
     //Resetter indhold
     document.getElementById("lowerSection").innerHTML = "";
-    document.getElementById("breadcrumb").innerHTML = "";
 
     //Fjerner sidste item i history-array
     history.pop();
@@ -216,16 +173,50 @@ function backBtn() {
     //Fjerner seneste item i lastVisit
     lastVisit.pop();
 
-    //Fjerner seneste item i breadcrumbs
-    if (breadcrumbs.length > 1) {
-        breadcrumbs.pop();
-    }
-
     //Skaber ny række af knapper, baseret på lastVisit og history
     document.getElementById("lowerSection").innerHTML = lastVisit[history.length];
+}
 
-    //Skaber breadcrumbs
-    document.getElementById("breadcrumb").innerHTML = breadcrumbs[history.length];
+function breadNav() {
+    if (document.getElementById("knap1")) {
+        document.getElementById("breadcrumb").innerHTML = "";
+        let btn1 = document.createElement("DIV");
+        btn1.setAttribute("id", "start");
+        btn1.setAttribute("class", "breadcrumb");
+        btn1.innerHTML = "Start";
+        document.getElementById("breadcrumb").appendChild(btn1);
+    } 
+    if (document.getElementById("knap3")) {
+        document.getElementById("breadcrumb").innerHTML = "";
+        let btn1 = document.createElement("DIV");
+        btn1.setAttribute("id", "start");
+        btn1.setAttribute("class", "breadcrumb");
+        btn1.innerHTML = "Start";
+        document.getElementById("breadcrumb").appendChild(btn1);
+        let btn2 = document.createElement("DIV");
+        btn2.setAttribute("id", "erhverv");
+        btn2.setAttribute("class", "breadcrumb");
+        btn2.innerHTML = "Erhverv";
+        document.getElementById("breadcrumb").appendChild(btn2);
+    }
+    if (document.getElementById("knap12")) {
+        document.getElementById("breadcrumb").innerHTML = "";
+        let btn1 = document.createElement("DIV");
+        btn1.setAttribute("id", "start");
+        btn1.setAttribute("class", "breadcrumb");
+        btn1.innerHTML = "Start";
+        document.getElementById("breadcrumb").appendChild(btn1);
+        let btn2 = document.createElement("DIV");
+        btn2.setAttribute("id", "erhverv");
+        btn2.setAttribute("class", "breadcrumb");
+        btn2.innerHTML = "Erhverv";
+        document.getElementById("breadcrumb").appendChild(btn2);
+        let btn3 = document.createElement("DIV");
+        btn3.setAttribute("id", "job");
+        btn3.setAttribute("class", "breadcrumb");
+        btn3.innerHTML = "Job";
+        document.getElementById("breadcrumb").appendChild(btn3);
+    }
 }
 
 function delBackBtn() {
@@ -241,4 +232,4 @@ function closeBtn() {
 //Ved hvert klik (uanset placering) kører funktionen nameBtn() (PÅ INGEN MÅDE OPTIMALT)
 document.body.addEventListener("click", nameBtn);
 document.body.addEventListener("click", delBackBtn);
-document.body.addEventListener("dblclick", console.log(breadcrumbs));
+document.body.addEventListener("click", breadNav);

@@ -167,20 +167,87 @@ html {
 }
 
 .button2 {
-  background-color: #D38256;
-  font-size: 20px;
-  height: 25px;
-  width: 80px;
-  margin: 30px;
+  background-color: #56A0D3;
+  font-size: 18px;
+  color: white;
+  width: 367px;
+  height: 46px;
   text-align: center;
+  align-items: center;
+  display: flex;
+  border-radius: 23px;
+}
+
+.button2 p {
+  font-family: "roboto", sans-serif;
+  align-self: center;
+  margin: auto;
 }
 
 .button3 {
-  background-color: #2D2D2D;
-  font-size: 15px;
+  background-color: #303030;
   color: #F2F0ED;
-  height: 20px;
-  width: 60px;
+  height: 66px;
+  border-radius: 33px;
+  width: 66px;
   margin: 30px;
   text-align: center;
+  position: relative;
+}
+
+.cross1 {
+  height: 4px;
+  width: 31px;
+  position: absolute;
+  background-color: white;
+  transform: rotate(45deg);
+  top: 30px;
+  left: 18px;
+}
+
+.cross2 {
+  height: 4px;
+  width: 31px;
+  position: absolute;
+  background-color: white;
+  transform: rotate(90deg);
+}
+
+.button4 {
+  color: #303030;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+.button4 p {
+  font-family: "Roboto Condensed" sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline;
+  position: relative;
+  left: 15px;
+}
+.line1 {
+  width: 12px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+}
+
+.line2 {
+  width: 8px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+.line3 {
+  width: 8px;
+  height: 2px;
+  background-color: #303030;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -2px;
 }

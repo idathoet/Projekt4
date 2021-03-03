@@ -8,7 +8,7 @@ function start () {
   let background = document.createElement("DIV");
   background.setAttribute("id", "pop-up");
   background.innerHTML = "backgroundDIV";
-  document.body.appendChild(background);
+  document.body.div.appendChild(background);
 //opretter knap1
   let knap1 = document.createElement("DIV");
   knap1.innerHTML = "former";

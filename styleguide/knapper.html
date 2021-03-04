@@ -1,157 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knapper</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-          <a href="index.html"><ul>Forside</ul></a>
-          <a href="farver.html"><ul>Farver</ul></a>
-          <a href="knapper.html"><ul>Knapper</ul></a>
-          <a href="fonts.html"><ul>Fonts</ul></a>
-    </nav>
-    <div class="container">
-      <div class="subcon">
-        <div class="button1 element"><p>Assistent knap</p></div>
-        <div class="beskrivelse">Denne knap benyttes i toppen af hjemmesiden til at åbne wizarden</div>
-        <div class="snippet"> HTML:<br> &lt;div class="button1"&gt;&lt;p&gt;Assistent knap&lt;/p&gt;&lt;/div&gt; <br><br>
-          CSS:<br>
-          .button1 { <br>
-            background-color: #56A0D3;<br>
-            font-size: 18px;<br>
-            color: white;<br>
-            width: 196px;<br>
-            height: 46px;<br>
-            text-align: center;<br>
-            align-items: center;<br>
-            display: flex;<br>
-            border-radius: 23px;<br>
-          } <br><br>
 
-          .button1 p {<br>
-            font-family: "roboto", sans-serif;<br>
-            align-self: center;<br>
-            margin: auto;<br>
-          }
-        </div>
-      </div>
-      <div class="subcon">
-        <div class="button2 element"><p>Valgmuligheds knap</p></div>
-        <div class="beskrivelse">Denne knap bruges til de valgmuligheder der findes på wizarden</div>
-        <div class="snippet">
-          HTML:<br>
-          &lt;div class="button2"&gt;&lt;p&gt;Valgmuligheds knap&lt;/p&gt;&lt;/div&gt; <br><br>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knapper</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
 
-          CSS:<br>
-          .button2 { <br>
-            background-color: #56A0D3;<br>
-            font-size: 18px;<br>
-            color: white;<br>
-            width: 367px;<br>
-            height: 46px;<br>
-            text-align: center;<br>
-            align-items: center;<br>
-            display: flex;<br>
-            border-radius: 23px;<br>
-          } <br><br>
-
-          .button1 p { <br>
-            font-family: "roboto", sans-serif;
-            align-self: center;
-            margin: auto; <br>
-          }
-        </div>
-      </div>
-      <div class="subcon">
-        <div class="button3 element"><div class="cross1"><div class="cross2"></div></div></div>
-        <div class="beskrivelse">Denne knap benyttes i toppen af wizarden til at lukke den</div>
-        <div class="snippet">
-          HTML:<br>
-          &lt;div class="button3 element"&gt;&lt;div class="cross1"&gt;&lt;div class="cross2&gt;>&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-          <br><br>
-          CSS: <br>
-          .button3 { <br>
-            background-color: #303030;<br>
-            color: #F2F0ED;<br>
-            height: 66px;<br>
-            border-radius: 33px;<br>
-            width: 66px;<br>
-            margin: 30px;<br>
-            text-align: center;<br>
-            position: relative;<br>
-          }<br><br>
-
-          .cross1 { <br>
-            height: 4px;<br>
-            width: 31px;<br>
-            position: absolute;<br>
-            background-color: white;<br>
-            transform: rotate(45deg);<br>
-            top: 30px;<br>
-            left: 18px;<br>
-          }<br><br>
-
-          .cross2 { <br>
-            height: 4px;<br>
-            width: 31px;<br>
-            position: absolute;<br>
-            background-color: white;<br>
-            transform: rotate(90deg);<br>
-          }<br>
-      </div>
-    </div>
+<body>
+  <nav>
+    <a href="index.html">Forside</a>
+    <a href="farver.html">Farver</a>
+    <a href="knapper.html">Knapper</a>
+    <a href="fonts.html">Fonts</a>
+  </nav>
+  <div class="container">
     <div class="subcon">
-      <div class="button4 element"><div class="line1"><div class="line2"></div><div class="line3"></div></div><p>Tilbage</p></div>
-      <div class="beskrivelse">Denne knap benyttes i venstre side af wizarden til at gå tilbage til forrige side</div>
-      <div class="snippet">
-        HTML: <br>
-        &lt;div class="button4 element"&gt;&lt;div class="line1"&gt;&lt;div class="line2"&gt;&lt;/div&gt;&lt;div class="line3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;Tilbage&lt;/p&gt;&lt;/div&gt;<br>
-        <br>CSS:<br>
-        .button4 { <br>
-          color: #303030;<br>
-          text-align: center;<br>
-          align-items: center;<br>
-          display: flex;<br>
-        }<br><br>
-        .button4 p {<br>
-          font-family: "Roboto Condensed" sans-serif;<br>
-          font-size: 16px;<br>
-          font-weight: 700;<br>
-          text-decoration: underline;<br>
-          position: relative;<br>
-          left: 15px;<br>
-        }<br><br>
-        .line1 {<br>
-          width: 12px;<br>
-          height: 2px;<br>
-          background-color: #303030;<br>
-          position: absolute;<br>
-        }<br><br>
+      <div class="button1 element">
+        <p>Assistent knap</p>
+      </div>
+      <div class="beskrivelse">Denne knap benyttes i toppen af hjemmesiden til at åbne wizarden</div>
+      <div class="snippet"> HTML:<br> &lt;div class="button1"&gt;&lt;p&gt;Assistent knap&lt;/p&gt;&lt;/div&gt; <br><br>
+        CSS:<br>
+        .button1 { <br>
+        background-color: #56A0D3;<br>
+        font-size: 18px;<br>
+        color: white;<br>
+        width: 196px;<br>
+        height: 46px;<br>
+        text-align: center;<br>
+        align-items: center;<br>
+        display: flex;<br>
+        border-radius: 23px;<br>
+        } <br><br>
 
-        .line2 {<br>
-          width: 8px;<br>
-          height: 2px;<br>
-          background-color: #303030;<br>
-          position: absolute;<br>
-          transform: rotate(45deg);<br>
-          top: 2px;<br>
-        }<br><br>
-
-        .line3 {<br>
-          width: 8px;<br>
-          height: 2px;<br>
-          background-color: #303030;<br>
-          position: absolute;<br>
-          transform: rotate(-45deg);<br>
-          top: -2px;<br>
+        .button1 p {<br>
+        font-family: "roboto", sans-serif;<br>
+        align-self: center;<br>
+        margin: auto;<br>
         }
       </div>
     </div>
-  </body>
+    <div class="subcon">
+      <div class="button2 element">
+        <p>Valgmuligheds knap</p>
+      </div>
+      <div class="beskrivelse">Denne knap bruges til de valgmuligheder der findes på wizarden</div>
+      <div class="snippet">
+        HTML:<br>
+        &lt;div class="button2"&gt;&lt;p&gt;Valgmuligheds knap&lt;/p&gt;&lt;/div&gt; <br><br>
+
+        CSS:<br>
+        .button2 { <br>
+        background-color: #56A0D3;<br>
+        font-size: 18px;<br>
+        color: white;<br>
+        width: 367px;<br>
+        height: 46px;<br>
+        text-align: center;<br>
+        align-items: center;<br>
+        display: flex;<br>
+        border-radius: 23px;<br>
+        } <br><br>
+
+        .button1 p { <br>
+        font-family: "roboto", sans-serif;
+        align-self: center;
+        margin: auto; <br>
+        }
+      </div>
+    </div>
+    <div class="subcon">
+      <div class="button3 element">
+        <div class="cross1">
+          <div class="cross2"></div>
+        </div>
+      </div>
+      <div class="beskrivelse">Denne knap benyttes i toppen af wizarden til at lukke den</div>
+      <div class="snippet">
+        HTML:<br>
+        &lt;div class="button3 element"&gt;&lt;div class="cross1"&gt;&lt;div
+        class="cross2&gt;>&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        <br><br>
+        CSS: <br>
+        .button3 { <br>
+        background-color: #303030;<br>
+        color: #F2F0ED;<br>
+        height: 66px;<br>
+        border-radius: 33px;<br>
+        width: 66px;<br>
+        margin: 30px;<br>
+        text-align: center;<br>
+        position: relative;<br>
+        }<br><br>
+
+        .cross1 { <br>
+        height: 4px;<br>
+        width: 31px;<br>
+        position: absolute;<br>
+        background-color: white;<br>
+        transform: rotate(45deg);<br>
+        top: 30px;<br>
+        left: 18px;<br>
+        }<br><br>
+
+        .cross2 { <br>
+        height: 4px;<br>
+        width: 31px;<br>
+        position: absolute;<br>
+        background-color: white;<br>
+        transform: rotate(90deg);<br>
+        }<br>
+      </div>
+    </div>
+    <div class="subcon">
+      <div class="button4 element">
+        <div class="line1">
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <p>Tilbage</p>
+      </div>
+      <div class="beskrivelse">Denne knap benyttes i venstre side af wizarden til at gå tilbage til forrige side</div>
+      <div class="snippet">
+        HTML: <br>
+        &lt;div class="button4 element"&gt;&lt;div class="line1"&gt;&lt;div class="line2"&gt;&lt;/div&gt;&lt;div
+        class="line3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;Tilbage&lt;/p&gt;&lt;/div&gt;<br>
+        <br>CSS:<br>
+        .button4 { <br>
+        color: #303030;<br>
+        text-align: center;<br>
+        align-items: center;<br>
+        display: flex;<br>
+        }<br><br>
+        .button4 p {<br>
+        font-family: "Roboto Condensed" sans-serif;<br>
+        font-size: 16px;<br>
+        font-weight: 700;<br>
+        text-decoration: underline;<br>
+        position: relative;<br>
+        left: 15px;<br>
+        }<br><br>
+        .line1 {<br>
+        width: 12px;<br>
+        height: 2px;<br>
+        background-color: #303030;<br>
+        position: absolute;<br>
+        }<br><br>
+
+        .line2 {<br>
+        width: 8px;<br>
+        height: 2px;<br>
+        background-color: #303030;<br>
+        position: absolute;<br>
+        transform: rotate(45deg);<br>
+        top: 2px;<br>
+        }<br><br>
+
+        .line3 {<br>
+        width: 8px;<br>
+        height: 2px;<br>
+        background-color: #303030;<br>
+        position: absolute;<br>
+        transform: rotate(-45deg);<br>
+        top: -2px;<br>
+        }
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

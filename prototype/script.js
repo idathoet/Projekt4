@@ -191,22 +191,27 @@ function nameBtn() {
 
 //Funktion, der tjekker om en specifik knap, baseret på id, findes, og hvis den gør, ændrer den titlen på siden
 function giveTitle() {
+
     if (document.getElementById("knap1")) {
         document.getElementById("titel").innerHTML = "";
         document.getElementById("titel").innerHTML = "Er du...";
     } 
+
     if (document.getElementById("knap3")) {
         document.getElementById("titel").innerHTML = "";
         document.getElementById("titel").innerHTML = "Ønsker du...";
     }
+
     if (document.getElementById("knap14")) {
         document.getElementById("titel").innerHTML = "";
         document.getElementById("titel").innerHTML = "Ønsker du info om...";
     }
+
     if (document.getElementById("knap8")) {
         document.getElementById("titel").innerHTML = "";
         document.getElementById("titel").innerHTML = "Ønsker du...";
     }
+    
     if (document.getElementById("knap12")) {
         document.getElementById("titel").innerHTML = "";
         document.getElementById("titel").innerHTML = "Ønsker du info om...";
